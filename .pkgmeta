@@ -4,6 +4,9 @@ package-as: DownloadCount
 # Listing of externals:
 # externals:
 
+move-folders:
+ example.txt: example.bat
+
 # File list to ignore:
 ignore:
  - .pkgmeta
