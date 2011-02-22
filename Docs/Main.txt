@@ -15,7 +15,7 @@ Once installed, run it via:
 
  lua5.1 DownloadCount.lua CurseID WoWUIID WoWIID
 
-The CurseID is your ID on [[http://www.curse.com | Curse.com]], WoWUIID is the ID on [[http://wowui.incgamers.com/ | WoWUI]] and WoWIID is the ID on [[http://www.wowinterface.com WoW | Interface]].
+The CurseID is your ID on [[http://www.curse.com | Curse.com]], WoWUIID is the ID on [[http://wowui.incgamers.com/ | WoWUI]] and WoWIID is the ID on [[http://www.wowinterface.com | WoW Interface]].
 
 For example, with Ackis Recipe List it is:
 
