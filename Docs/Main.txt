@@ -1,16 +1,16 @@
-==What it does==
+==What it does
 This script will fetch your addon page from the three major release sites and provide you with at total of the download counts from the sites.
 
 To run this code you need to get socket. You can get it from: [http://luaforge.net/projects/luasocket/].
 
-==Important Note==
+==Important Note
 This is not an addon to be run in WoW.  It is a developer utility if they are interested in knowing how many downloads they have from the three major release sites.
 
 ==Where to get it==
 *[http://wow.curseforge.com/projects/dlcount/files/ CurseForge] - Often Beta quality
 *[http://wow.curse.com/downloads/wow-addons/details/dlcount.aspx Curse] - Most updated stable version
 
-==How to get it to work==
+==How to get it to work
 Once installed, run it via:
 
  lua5.1 DownloadCount.lua CurseID WoWUIID WoWIID
@@ -25,16 +25,18 @@ With Querier, it would be:
 
  lua5.1 DownloadCount.lua querier 6461 9072
 
-==Known Issues==
+For a working example, please take a look at the [http://wow.curseforge.com/addons/dlcount/pages/example-output/ example] page.
+
+==Known Issues
 All known issues will be kept at the [http://wow.curseforge.com/projects/dlcount/tickets/ CurseForge] tracker.
 
 Please use the [http://wow.curseforge.com/projects/dlcount/tickets/ CurseForge] tracker to file bug reports.
 
-==Wish List==
+==Wish List
 Please use the [http://wow.curseforge.com/projects/dlcount/tickets/ CurseForge] tracker to add suggestions and feature requests.
 
-==Bug Reporting==
+==Bug Reporting
 Please use the [http://wow.curseforge.com/projects/dlcount/tickets/ CurseForge] tracker to file bug reports.
 
-==Wiki==
+==Wiki
 [http://www.wowpedia.org/DownloadCount WowPedia]
