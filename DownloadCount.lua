@@ -40,7 +40,7 @@ do
 	-- URL of where the add-ons are hosted
 	local curseurl = "http://wow.curse.com/downloads/wow-addons/details/"
 	local wowuiurl = "http://wowui.worldofwar.net/?p=mod&m="
-	local wowiurl = "http://www.wowinterface.com/downloads/info"
+	--local wowiurl = "http://www.wowinterface.com/downloads/info"
 
 	-- Patterns which we match to find download information
 	--local cursepatternmatch1 = "<th>Downloads Total:</th>\n                                            <td>(%d+,%d+)</td>"
@@ -49,12 +49,12 @@ do
 	local cursepatternmatch2 = "Downloads Total:</dt><dd class=\"alt\">(%d+)</dd>"
 	local wowuipatternmatch1 = "<b>(%d+,%d+)</b> total downloads</b>"
 	local wowuipatternmatch2 = "<b>(%d+)</b> total downloads</b>"
-	local wowipatternmatch1 = "<td class=\"alt1\"><div class=\"smallfont\">(%d+,%d+)</div></td>"
-	local wowipatternmatch2 = "<td class=\"alt1\"><div class=\"smallfont\">(%d+)</div></td>"
+	--local wowipatternmatch1 = "<td class=\"alt1\"><div class=\"smallfont\">(%d+,%d+)</div></td>"
+	--local wowipatternmatch2 = "<td class=\"alt1\"><div class=\"smallfont\">(%d+)</div></td>"
 
 	print("Curse ID: " .. arg[1])
 	print("WoWUI ID: " .. arg[2])
-	print("WoWI  ID: " .. arg[3])
+	--print("WoWI  ID: " .. arg[3])
 	print("")
 	print("Downloads by site:")
 
@@ -64,30 +64,47 @@ do
 
 	if (arg[1]) then
 
-		local tempurl = curseurl .. arg[1] .. ".aspx"
-		curse = GetNumberDownloads(tempurl,cursepatternmatch1,cursepatternmatch2)
-		print("Curse Gaming:   " .. curse)
+		if (arg[1] ~= "nil") then
+			local tempurl = curseurl .. arg[1] .. ".aspx"
+			curse = GetNumberDownloads(tempurl,cursepatternmatch1,cursepatternmatch2)
+			print("Curse Gaming:   " .. curse)
+		else
+			curse = 0
+		end
 
 	end
 
 	if (arg[2]) then
 
-		local tempurl = wowuiurl .. arg[2]
-		WoWUI = GetNumberDownloads(tempurl,wowuipatternmatch1,wowuipatternmatch2)
-		print("WoW UI:         " .. WoWUI)
+		if (arg[2] ~= "nil") then
+			local tempurl = wowuiurl .. arg[2]
+			WoWUI = GetNumberDownloads(tempurl,wowuipatternmatch1,wowuipatternmatch2)
+			print("WoW UI:         " .. WoWUI)
+		else
+			print("WoW UI:         0")
+			WoWUI = 0
+		end
 
 	end
-
+-- WoW Interface doesn't have download numbers anymore?
+--[[
 	if (arg[3]) then
 
-		local tempurl = wowiurl .. arg[3] .. ".html"
-		WoWI = GetNumberDownloads(tempurl,wowipatternmatch1,wowipatternmatch2)
-		print("WoW Interface:  " .. WoWI)
+		if (arg[2] ~= "nil") then
+			local tempurl = wowiurl .. arg[3] .. ".html"
+			print(tempurl)
+			WoWI = GetNumberDownloads(tempurl,wowipatternmatch1,wowipatternmatch2)
+			print("WoW Interface:  " .. WoWI)
+		else
+			print("WoW Interface:  0")
+			WoWI = 0
+		end
 
 	end
-
+]]--
 	print("--------------------")
-	print("Total: " .. curse + WoWUI + WoWI)
+	--print("Total: " .. curse + WoWUI + WoWI)
+	print("Total: " .. curse + WoWUI)
 
 end
 
