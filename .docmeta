@@ -4,6 +4,6 @@
  output-page: "Main"
 
 -
- type: creole
+ type: text
  input-file: Docs/example.txt
  output-page: "Example Output"

@@ -25,7 +25,7 @@ With Querier, it would be:
 
  lua5.1 DownloadCount.lua querier 6461 9072
 
-For a working example, please take a look at the [[http://wow.curseforge.com/addons/dlcount/pages/example-output/ | example]] page.
+For a working example, please take a look at the [[http://wow.curseforge.com/addons/dlcount/pages/example-output/ | example]] page.  You need to have Lua5.1 in your path with [[http://luaforge.net/projects/luasocket/ | luasocket]] installed.
 
 ==Known Issues
 All known issues will be kept at the [[http://wow.curseforge.com/projects/dlcount/tickets/ | CurseForge]] tracker.
