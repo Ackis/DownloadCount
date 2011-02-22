@@ -1,4 +1,6 @@
 @echo off
+echo To use this file, rename it example.bat and run it.
+echo
 echo This will provide you with some examples on how to use this script:
 echo 
 echo Getting download counts for Ackis Recipe List
