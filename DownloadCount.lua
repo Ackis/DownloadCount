@@ -1,20 +1,22 @@
 --[[
-****************************************************************************************
-
-Download Count
-$Date: 2008-07-22 15:52:52 -0600 (Tue, 22 Jul 2008) $
-$Rev: 78941 $
-
-Author: Ackis on Illidan US Horde
-
-****************************************************************************************
-
+************************************************************************
+DownloadCount.lua
+Script which will add your total downloads from the three release sites.
+************************************************************************
+File date: @file-date-iso@
+File hash: @file-abbreviated-hash@
+Project hash: @project-abbreviated-hash@
+Project version: @project-version@
+************************************************************************
+Please see http://wow.curseforge.com/addons/dlcount/ for more information.
+************************************************************************
+This source code is released under Public Domain
+************************************************************************
 Require socket.  You can get it from: http://luaforge.net/projects/luasocket/
 
 This is not to be run in WoW or any other game.  It will query all of the release sites and obtain
 download information for the mod specified in the parameters.
-
-****************************************************************************************
+************************************************************************
 ]]--
 
 http = require("socket.http")
@@ -36,13 +38,15 @@ end
 do
 
 	-- URL of where the add-ons are hosted
-	local curseurl = "http://www.curse.com/downloads/details/"
+	local curseurl = "http://wow.curse.com/downloads/wow-addons/details/"
 	local wowuiurl = "http://wowui.worldofwar.net/?p=mod&m="
 	local wowiurl = "http://www.wowinterface.com/downloads/info"
 
 	-- Patterns which we match to find download information
-	local cursepatternmatch1 = "<th>Downloads Total:</th>\n                                            <td>(%d+,%d+)</td>"
-	local cursepatternmatch2 = "<th>Downloads Total:</th>\n                                            <td>(%d+)</td>"
+	--local cursepatternmatch1 = "<th>Downloads Total:</th>\n                                            <td>(%d+,%d+)</td>"
+	--local cursepatternmatch2 = "<th>Downloads Total:</th>\n                                            <td>(%d+)</td>"
+	local cursepatternmatch1 = "Downloads Total:</dt><dd class=\"alt\">(%d+)</dd>"
+	local cursepatternmatch2 = "Downloads Total:</dt><dd class=\"alt\">(%d+)</dd>"
 	local wowuipatternmatch1 = "<b>(%d+,%d+)</b> total downloads</b>"
 	local wowuipatternmatch2 = "<b>(%d+)</b> total downloads</b>"
 	local wowipatternmatch1 = "<td class=\"alt1\"><div class=\"smallfont\">(%d+,%d+)</div></td>"
@@ -60,7 +64,7 @@ do
 
 	if (arg[1]) then
 
-		local tempurl = curseurl .. arg[1]
+		local tempurl = curseurl .. arg[1] .. ".aspx"
 		curse = GetNumberDownloads(tempurl,cursepatternmatch1,cursepatternmatch2)
 		print("Curse Gaming:   " .. curse)
 

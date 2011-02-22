@@ -1,0 +1,9 @@
+-
+ type: wiki
+ input-file: Docs/Main.txt
+ output-page: "Main"
+
+-
+ type: wiki
+ input-file: Docs/example.txt
+ output-page: "Example Output"

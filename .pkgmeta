@@ -1,8 +1,6 @@
-# Package file as:
 package-as: DownloadCount
 
-# Listing of externals:
-# externals:
+license-output: LICENSE.txt
 
 move-folders:
  example.txt: example.bat
@@ -10,3 +8,5 @@ move-folders:
 # File list to ignore:
 ignore:
  - .pkgmeta
+ - .docmeta
+ - Docs
