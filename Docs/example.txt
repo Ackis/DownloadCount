@@ -5,16 +5,16 @@ echo This will provide you with some examples on how to use this script:
 echo 
 echo Getting download counts for Ackis Recipe List
 echo 
-echo lua5.1 DownloadCount.lua arl 5061 8512
+echo lua5.1 DownloadCount.lua arl nil
 echo 
-lua5.1 DownloadCount.lua arl 5061 8512
+lua5.1 DownloadCount.lua arl nil
 echo 
 echo Retrival complete.
 echo 
 echo Getting download counts for Querier
 echo 
-echo lua5.1 DownloadCount.lua querier 6461 9072
+echo lua5.1 DownloadCount.lua querier nil
 echo 
-lua5.1 DownloadCount.lua querier 6461 9072
+lua5.1 DownloadCount.lua querier nil
 echo 
 echo Retrival complete
