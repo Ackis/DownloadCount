@@ -1,9 +1,9 @@
 -
- type: wiki
+ type: creole
  input-file: Docs/Main.txt
  output-page: "Main"
 
 -
- type: wiki
+ type: creole
  input-file: Docs/example.txt
  output-page: "Example Output"
