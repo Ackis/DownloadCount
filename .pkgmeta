@@ -10,3 +10,5 @@ ignore:
  - .pkgmeta
  - .docmeta
  - Docs
+ - .gitignore
+
